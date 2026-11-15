@@ -49,8 +49,8 @@ import kotlin.math.sin
 private const val SECONDS_PER_TURN = 60.0 / (100.0 / 3.0)
 
 /**
- * For scratching: the part of each turntable nearest the middle of the screen,
- * scratched up and down like a real record (the scratch follows the angle the
+ * For scratching: the left side of each turntable, as both stand on a real
+ * battle setup, scratched up and down like a real record (the scratch follows the angle the
  * finger moves around the spindle), with a big crossfader for cuts below.
  */
 @Composable
@@ -87,24 +87,26 @@ private fun Turntable(vm: DjViewModel, index: Int, modifier: Modifier) {
                 maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(start = 6.dp),
             )
         }
-        Platter(deck, index, accent, Modifier.weight(1f).fillMaxWidth())
+        Platter(deck, accent, Modifier.weight(1f).fillMaxWidth())
+        // Start/stop at the bottom left, where a turntable has it
         Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            ToggleChip("CUE", false, DjColors.cue, Modifier.weight(1f).height(36.dp), enabled = ui.waveform != null) { deck.cue() }
             ToggleChip("PLAY", playing, accent, Modifier.weight(1f).height(36.dp), enabled = ui.waveform != null) {
                 deck.playing = !deck.playing
                 playing = deck.playing
             }
+            ToggleChip("CUE", false, DjColors.cue, Modifier.weight(1f).height(36.dp), enabled = ui.waveform != null) { deck.cue() }
         }
     }
 }
 
 /**
- * Part of a turntable: deck A's platter comes in from the left edge, deck B's
- * from the right, so the edge of each record faces the middle, under the
- * thumbs. Moving a finger along the record turns it by exactly that angle.
+ * The left side of a turntable: the platter comes in from the right with its
+ * left edge in reach, the same on both decks, as two real turntables stand
+ * side by side. The record turns clockwise, so on this side forward is up.
+ * Moving a finger along the record turns it by exactly that angle.
  */
 @Composable
-private fun Platter(deck: Deck, index: Int, accent: Color, modifier: Modifier) {
+private fun Platter(deck: Deck, accent: Color, modifier: Modifier) {
     val scope = rememberCoroutineScope()
     val fling = remember(deck) { RecordFling(deck, scope) }
     val tick = rememberFrameTick(active = { deck.active }) { deck.position }
@@ -155,7 +157,7 @@ private fun Platter(deck: Deck, index: Int, accent: Color, modifier: Modifier) {
         val h = size.height
         // A big record: most of it off screen, its edge in reach of the thumb
         val r = minOf(h * 0.56f, w * 1.7f)
-        val cx = if (index == 0) w - 10.dp.toPx() - r else 10.dp.toPx() + r
+        val cx = 10.dp.toPx() + r
         val cy = h / 2
         centre[0] = cx
         centre[1] = cy
@@ -184,9 +186,9 @@ private fun Platter(deck: Deck, index: Int, accent: Color, modifier: Modifier) {
         }
         drawCircle(accent, label, c)
         drawCircle(DjColors.background, 3.dp.toPx(), c)
-        // A marker on the record, as DJs put a sticker on it: shows where it is in the turn
-        // Deck B's record faces the middle from the right: its marker starts on that side
-        rotate(degrees + if (index == 1) 180f else 0f, c) {
+        // A marker on the record, as DJs put a sticker on it: shows where it is in the turn.
+        // It starts on the visible left side.
+        rotate(degrees + 180f, c) {
             drawLine(Color.White, Offset(cx + label + 2.dp.toPx(), cy), Offset(cx + vinyl - 2.dp.toPx(), cy),
                 strokeWidth = 3.dp.toPx(), cap = StrokeCap.Round)
             drawLine(DjColors.background, Offset(cx + label * 0.35f, cy), Offset(cx + label - 4.dp.toPx(), cy),
