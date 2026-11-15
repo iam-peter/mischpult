@@ -50,7 +50,7 @@ jobs:
       - name: Build signed APK
         env:
           MISCHPULT_KEYSTORE_PASSWORD: ${{ secrets.MISCHPULT_KEYSTORE_PASSWORD }}
-          MISCHPULT_KEY_ALIAS: ${{ secrets.MISCHPULT_KEY_ALIAS }}
+          MISCHPULT_KEY_ALIAS: ${{ vars.MISCHPULT_KEY_ALIAS }}
           MISCHPULT_KEY_PASSWORD: ${{ secrets.MISCHPULT_KEY_PASSWORD }}
         run: |
           ./gradlew --no-configuration-cache :app:assembleRelease
