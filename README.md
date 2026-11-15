@@ -68,13 +68,13 @@ reopens it when the output device changes.
   speed between updates, so the record doesn't lurch at the touch rate (which
   sounded like a squeak); faster than play speed the audio is averaged over the
   stretch passed, so treble doesn't fold back as a whistle.
-* **Scratch tab**: the part of each turntable nearest the middle of the screen
-  (deck A's from the left edge, B's from the right), scratched up and down: the
-  record turns by exactly the angle the finger moves around the spindle (33⅓
-  rpm), flicks coast as on the waveform. Below, a big crossfader that jumps to
-  the finger for cuts, and a SMOOTH / CUT curve switch (cut: the far deck comes
-  in within the first 6 % of travel; the gain is ramped per block, so cuts
-  don't click).
+* **Scratch tab**: the left side of each turntable, the same on both decks as
+  two real turntables stand side by side, scratched up and down (the record
+  turns clockwise, so up is forward): the record turns by exactly the angle the
+  finger moves around the spindle (33⅓ rpm), flicks coast as on the waveform.
+  Below, a big crossfader that jumps to the finger for cuts, and a SMOOTH / CUT
+  curve switch (cut: the far deck comes in within the first 6 % of travel;
+  the gain is ramped per block, so cuts don't click).
 * **Progressive loading**: decoding appends to a pre-sized, memory-mapped
   file and publishes how many frames are ready. The deck plays and scratches
   within that range and waits at its edge ("Buffering…") until more arrives;

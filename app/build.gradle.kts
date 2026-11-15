@@ -40,11 +40,26 @@ android {
         }
     }
 
+    // Release signing comes from the environment (CI secrets, or a local
+    // keystore); without it the release APK is built unsigned
+    val keystore = System.getenv("MISCHPULT_KEYSTORE")?.let(::file)?.takeIf { it.exists() }
+    signingConfigs {
+        if (keystore != null) {
+            create("release") {
+                storeFile = keystore
+                storePassword = System.getenv("MISCHPULT_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("MISCHPULT_KEY_ALIAS")
+                keyPassword = System.getenv("MISCHPULT_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
         }
         release {
+            if (keystore != null) signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
