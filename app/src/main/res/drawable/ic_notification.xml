@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Status bar: the logo (two knobs over a crossfader) in white -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="24" android:viewportHeight="24">
+    <path android:strokeColor="#FFFFFFFF" android:strokeWidth="1.8" android:pathData="M2.7,9.5a4.3,4.3 0,1 0,8.6,0a4.3,4.3 0,1 0,-8.6,0zM12.7,9.5a4.3,4.3 0,1 0,8.6,0a4.3,4.3 0,1 0,-8.6,0z" />
+    <path android:strokeColor="#FFFFFFFF" android:strokeWidth="1.8" android:strokeLineCap="round" android:pathData="M32,9.5L34.67,7.56M76,9.5L74.5,6.56" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M3,18.6H21V20.2H3zM10.2,16H13.8V22.8H10.2z" />
+</vector>

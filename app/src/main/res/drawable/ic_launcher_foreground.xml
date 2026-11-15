@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mischpult launcher icon: two LED-ring knobs (deck A blue, deck B amber) above a crossfader. Generated from the logo; keep within the 66 dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FF3A3D40" android:pathData="M50.16,43.58a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM49.66,49.95a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM46.32,55.39a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM68.33,32.04a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM74.54,33.53a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM79.4,37.68a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM81.84,43.58a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM81.34,49.95a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM78,55.39a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0z" />
+    <path android:fillColor="#FF3FA9F5" android:pathData="M26.97,55.39a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM23.64,49.95a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM23.14,43.58a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM25.58,37.68a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM30.44,33.53a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM36.65,32.04a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM42.86,33.53a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM47.72,37.68a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0z" />
+    <path android:fillColor="#FFFF9F43" android:pathData="M58.65,55.39a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM55.32,49.95a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM54.82,43.58a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM57.26,37.68a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0zM62.12,33.53a1.51,1.51 0,1 0,3.02,0a1.51,1.51 0,1 0,-3.02,0z" />
+    <path android:fillColor="#FF2A2D30" android:pathData="M29.16,45.72a9,9 0,1 0,18,0a9,9 0,1 0,-18,0zM60.84,45.72a9,9 0,1 0,18,0a9,9 0,1 0,-18,0z" />
+    <path android:strokeColor="#FFE6E6E1" android:strokeWidth="1.87" android:strokeLineCap="round" android:pathData="M38.16,45.72L43.98,41.49M69.84,45.72L66.57,39.3" />
+    <path android:fillColor="#FF0E1011" android:pathData="M33.84,69.48H74.16V73.08H33.84z" />
+    <path android:fillColor="#FFC9CBC6" android:pathData="M48.96,64.44H59.04V77.4H48.96z" />
+    <path android:fillColor="#FF8E918C" android:pathData="M48.96,74.52H59.04V77.4H48.96z" />
+    <path android:fillColor="#FF0E1011" android:pathData="M53.57,66.6H54.43V73.08H53.57z" />
+</vector>
