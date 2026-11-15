@@ -1,17 +1,29 @@
 package de.mischpult.library
 
-import kotlinx.serialization.SerialName
+import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.descriptors.PrimitiveKind
+import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
 
-@Serializable
+@Serializable(with = TrackSourceSerializer::class)
 enum class TrackSource {
-    /** From an online source plugin ([Track.plugin]). Stored as "YOUTUBE", the only one there was at first. */
-    @SerialName("YOUTUBE") ONLINE,
+    /** From an online source plugin ([Track.plugin]). */
+    ONLINE,
     LOCAL_FILE,
 }
 
-/** Plugin id of online tracks saved before plugins: the YouTube source was built in then. */
-const val FIRST_PLUGIN = "youtube"
+/**
+ * Stores [TrackSource] by name. Anything but a local file reads as online,
+ * so values written by older versions still load.
+ */
+object TrackSourceSerializer : KSerializer<TrackSource> {
+    override val descriptor = PrimitiveSerialDescriptor("de.mischpult.library.TrackSource", PrimitiveKind.STRING)
+    override fun serialize(encoder: Encoder, value: TrackSource) = encoder.encodeString(value.name)
+    override fun deserialize(decoder: Decoder): TrackSource =
+        if (decoder.decodeString() == TrackSource.LOCAL_FILE.name) TrackSource.LOCAL_FILE else TrackSource.ONLINE
+}
 
 /** A playable item, independent of where the audio comes from. */
 @Serializable
@@ -26,5 +38,5 @@ data class Track(
     val durationSec: Long = -1,
     val thumbnailUrl: String? = null,
     /** For online tracks: the id of the source plugin they come from. */
-    val plugin: String = FIRST_PLUGIN,
+    val plugin: String = "",
 )
