@@ -7,6 +7,15 @@ files from the device, crates, waveforms, scratching, loops, hot cues, effects,
 a sampler, MIDI controllers and set recording. Online sources are not built in:
 they come as separate plugin apps (see [docs/PLUGINS.md](docs/PLUGINS.md)).
 
+**[Website](https://iam-peter.github.io/mischpult/) · [Download the APK](https://github.com/iam-peter/mischpult/releases/latest)** (Android 8.0 or newer)
+
+<p>
+  <img src="site/img/decks.webp" width="200" alt="Decks">
+  <img src="site/img/library.webp" width="200" alt="Library">
+  <img src="site/img/scratch.webp" width="200" alt="Scratch">
+  <img src="site/img/sampler.webp" width="200" alt="Hot cue pads">
+</p>
+
 ## Build
 
 ```bash
@@ -15,6 +24,14 @@ they come as separate plugin apps (see [docs/PLUGINS.md](docs/PLUGINS.md)).
 
 Needs the Android SDK (compileSdk 37), JDK 21, NDK 29 and CMake 4.1 (Gradle
 installs the last two on first build).
+
+CI (GitHub Actions) runs the tests and builds a debug and a release APK for
+every push and pull request; they are attached to the workflow run. Pushing a
+tag `vX.Y.Z` that matches `versionName` builds a signed APK and publishes it as
+a release. The signing key comes from the environment (`MISCHPULT_KEYSTORE`,
+`MISCHPULT_KEYSTORE_PASSWORD`, `MISCHPULT_KEY_ALIAS`, `MISCHPULT_KEY_PASSWORD`);
+without it the release APK is unsigned. The website in `site/` is published to
+GitHub Pages.
 
 ## How it works
 

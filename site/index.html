@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mischpult — two-deck DJ app for Android</title>
+  <meta name="description" content="Mischpult is a free two-deck DJ app for Android with the controls of a hardware console: waveforms, sync, key lock, hot cues, loops, scratching, effects, a sampler, MIDI controllers and set recording.">
+  <meta property="og:title" content="Mischpult — two-deck DJ app for Android">
+  <meta property="og:description" content="Free and open source. Two decks, a mixer, a sampler and turntables to scratch on, in your pocket.">
+  <meta property="og:image" content="https://iam-peter.github.io/mischpult/img/decks.webp">
+  <meta property="og:url" content="https://iam-peter.github.io/mischpult/">
+  <meta name="theme-color" content="#151617">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#">
+      <img src="img/logo.svg" alt="" width="32" height="32">
+      <span>MISCHPULT</span>
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#sources">Sources</a>
+      <a href="https://github.com/iam-peter/mischpult">Source code</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker"><span class="led a"></span>DECK A <span class="led b"></span>DECK B</p>
+        <h1>A mixing console<br>in your pocket.</h1>
+        <p class="lead">
+          <em>Mischpult</em> is German for mixing console. It is a two-deck DJ
+          app for Android with the controls of one: waveforms, sync and key
+          lock, hot cues and loops, effects, a sampler, turntables to scratch
+          on, MIDI controllers and set recording. Free and open source.
+        </p>
+        <div class="actions">
+          <a class="pad primary" href="https://github.com/iam-peter/mischpult/releases/latest">
+            <span class="dot"></span>Download APK
+          </a>
+          <a class="pad" href="https://github.com/iam-peter/mischpult">
+            <span class="dot"></span>View on GitHub
+          </a>
+        </div>
+        <p class="fine">Android 8.0 or newer · GPL-3.0 · no ads, no account, no tracking</p>
+      </div>
+      <figure class="phone hero-phone">
+        <img src="img/decks.webp" alt="The DECKS tab: two beat-synced scrolling waveforms above two deck cards and a mixer with channel faders and a crossfader" width="960" height="1950">
+      </figure>
+    </section>
+
+    <section class="shots" aria-label="Screenshots">
+      <figure class="phone">
+        <img src="img/library.webp" alt="The Library: music files from the device with BPM and key, each with A and B buttons" loading="lazy" width="960" height="1950">
+        <figcaption><b>Library</b> Your music files, sorted into crates, with BPM and key.</figcaption>
+      </figure>
+      <figure class="phone">
+        <img src="img/scratch.webp" alt="The SCRATCH tab: two turntable platters with strobe dots and a big crossfader below" loading="lazy" width="960" height="1950">
+        <figcaption><b>Scratch</b> Two turntables and a big cut fader, scratched up and down.</figcaption>
+      </figure>
+      <figure class="phone">
+        <img src="img/sampler.webp" alt="The SAMPLER tab in hot cue mode: eight coloured pads per deck, each with its cue time" loading="lazy" width="960" height="1950">
+        <figcaption><b>Pads</b> Both decks' hot cues as big pads, or four banks of samples.</figcaption>
+      </figure>
+    </section>
+
+    <section id="features" class="features">
+      <h2>What's on the console</h2>
+      <div class="grid">
+        <article class="card">
+          <h3><span class="led a"></span>Two decks</h3>
+          <p>Scrolling waveforms you can grab like a record, coloured by bass and treble. Tempo with key lock, automatic BPM and beat grid, one-tap sync.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led b"></span>Mixer</h3>
+          <p>Gain, three-band isolator EQ with full kill, a one-knob filter, channel faders and a crossfader with smooth and cut curves.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led c"></span>Cues and loops</h3>
+          <p>Eight hot cues per track, saved with it. Auto loops, loop rolls and beat jumps that stay on the grid, sample-exact.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led a"></span>Effects</h3>
+          <p>A beat-synced ping-pong echo, reverb and flanger per deck, with tails that ring out after you switch them off.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led b"></span>Scratching</h3>
+          <p>Turntables that follow your finger at 33⅓ rpm, flicks that coast and slow down like a platter, and a cut fader that jumps to your thumb.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led c"></span>Sampler</h3>
+          <p>Sixteen pads in four banks, quantised to the leading deck. Grab a deck's loop onto a pad, or load a file; key lock keeps its pitch.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led a"></span>Key detection</h3>
+          <p>Every track's key in Camelot notation. Keys that mix with what's playing light up green.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led b"></span>MIDI controllers</h3>
+          <p>USB and Bluetooth LE controllers with MIDI learn, jog wheels, performance pads and LED feedback.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led c"></span>Record the set</h3>
+          <p>REC records the master to your Music folder, with a set list of what was on air, ready to share.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led a"></span>Headphone cue</h3>
+          <p>Split output sends the master to one ear and the cue mix to the other: pre-listen with a splitter cable.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led b"></span>Low latency</h3>
+          <p>A native audio engine on Oboe: a few milliseconds from touch to sound on recent phones, and it keeps playing in the background.</p>
+        </article>
+        <article class="card">
+          <h3><span class="led c"></span>Gig ready</h3>
+          <p>Prepare a crate ahead of time so the set never depends on the venue's network. Portrait, landscape and tablets.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="sources" class="sources">
+      <div class="lcd">
+        <h2>Your music, your sources</h2>
+        <p>
+          Mischpult plays the audio files on your device. It contains no code
+          for any streaming or video service. Online sources can be added as
+          separate <b>source plugins</b>: apps that talk to Mischpult through a
+          small, documented protocol. A plugin brings its own code, licence and
+          responsibilities.
+        </p>
+        <p><a href="https://github.com/iam-peter/mischpult/blob/main/docs/PLUGINS.md">Read the plugin protocol →</a></p>
+      </div>
+    </section>
+
+    <section class="install">
+      <h2>Install</h2>
+      <ol>
+        <li>Download the APK from the <a href="https://github.com/iam-peter/mischpult/releases/latest">latest release</a> on your phone.</li>
+        <li>Open it. Android asks once whether your browser or file manager may install apps; allow it.</li>
+        <li>Open Mischpult, go to <b>Library → Files</b> and add the folder with your music.</li>
+      </ol>
+      <p>Or build it yourself: <code>./gradlew :app:installDebug</code> — see the <a href="https://github.com/iam-peter/mischpult#build">README</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mischpult is free software under the <a href="https://github.com/iam-peter/mischpult/blob/main/LICENSE">GNU GPL v3</a>. Third-party components are listed in the <a href="https://github.com/iam-peter/mischpult/blob/main/THIRD_PARTY_NOTICES.md">notices</a>.</p>
+    <p>Screenshots show generated demo tracks. Android is a trademark of Google LLC.</p>
+  </footer>
+</body>
+</html>
